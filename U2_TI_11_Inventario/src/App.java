@@ -49,7 +49,20 @@ public class App {
             System.out.println("No se pudo eliminar");
         }
 
-        
+        System.out.println("Ahora agregare el producto 404");
+        boolean agregado = inventario.agregarProducto(productofour);
+        if (agregado) {
+            System.out.println("checate ahora si sale");
+        } else {
+            System.out.println("No se pudo agregar");
+        }
+
+        Producto buscando5 = inventario.buscar("404");
+        if (buscando5 != null) {
+            System.out.println("trakas, si tenemos eso aqui " + buscando5.getNombre() + " y tenemos " + buscando5.getCantidad());
+        } else {
+            System.out.println("ni sabia si estaba eso pero no lo tenemos");
+        }    
 
 
     }
